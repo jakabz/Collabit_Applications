@@ -1,0 +1,83 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.applications {
+  background-color:#fff;
+  border: 1px solid #ececec;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  
+  .wptitle {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+    margin: 0;
+    background-color: "[theme: themeDarkAlt]";
+
+    .wptitleIcon {
+      vertical-align: middle;
+      margin: 0 5px 0 15px;
+    }
+
+    .addAppContainer {
+      float:right;
+      margin: 15px;
+      cursor:pointer;
+    }
+  }
+
+  .wptitle span {
+    margin:15px 0;
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+  .applicationItem {
+    float:left;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+
+    .applicationItemCard {
+      height: 100px;
+      color: #fff;
+      //margin: 10px 5px 0px 5px;
+      background-color: "[theme: themePrimary]";
+
+      .applicationIconContainer {
+        margin:0;
+        
+        .applicationIcon {
+          font-size:36px;
+          margin: 15px 0 10px 0;
+        }
+      }
+
+      .applicationTitle {
+        font-size: 16px;
+      }
+    }
+
+    .applicationItemCard:hover {
+      opacity:0.8;
+    }
+  }
+
+  .applicationItem:nth-child(odd) .applicationItemCard {
+    margin: 10px 5px 0 0;
+  }
+  .applicationItem:nth-child(even) .applicationItemCard {
+    margin: 10px 0 0 5px;
+  }
+
+  .applicationItem.Blue .applicationItemCard{
+    background-color: "[theme: themePrimary]";
+  }
+
+  .applicationItem.Green .applicationItemCard{
+    background-color: "[theme: themeDarkAlt]";
+  }
+}
+.clear {
+  clear: both;
+  font-size:0;
+  height: 0;
+}
