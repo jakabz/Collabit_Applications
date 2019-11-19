@@ -44,7 +44,7 @@ export default class ApplicationsWebPart extends BaseClientSideWebPart<IApplicat
     mquery += '$filter=AuthorId eq ' + this.context.pageContext.legacyPageContext.userId +'&';
     //mquery += '$top=100&';
     //mquery += '$orderby=EventDate asc';
-    this._getListData(mquery,'MyApplications').then((response) => {
+    this._getListData(mquery,'My Applications').then((response) => {
       this.myApps = response.value;
       this.myAppsinit = true;
       this.render();
