@@ -24,7 +24,7 @@ export default class Applications extends React.Component<IApplicationsProps, {}
       }
     });
 
-    if(this.props.myAppsResult.length > 0){
+    if(this.props.myAppsResult){
       this.myitems = this.props.cantralAppsResult.map((item, key) => {
         if(item.Id == this.props.myAppsResult[0].Application1Id || item.Id == this.props.myAppsResult[0].Application2Id){
           if(this.defaultIds.indexOf(item.Id) == -1){
