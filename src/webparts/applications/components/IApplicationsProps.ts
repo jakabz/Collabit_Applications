@@ -3,4 +3,5 @@ export interface IApplicationsProps {
   cantralAppsResult: any;
   myAppsResult: any;
   absoluteUrl:string;
+  setLink: string;
 }

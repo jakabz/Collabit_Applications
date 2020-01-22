@@ -18,6 +18,7 @@ import {
 
 export interface IApplicationsWebPartProps {
   title: string;
+  setLink: string;
   cantralAppsResult: any;
   myAppsResult:any;
   absoluteUrl: string;
@@ -64,6 +65,7 @@ export default class ApplicationsWebPart extends BaseClientSideWebPart<IApplicat
       Applications,
       {
         title: this.properties.title,
+        setLink: this.properties.setLink,
         cantralAppsResult: this.centralApps,
         myAppsResult: this.myApps,
         absoluteUrl: this.context.pageContext.site.absoluteUrl,
@@ -93,6 +95,9 @@ export default class ApplicationsWebPart extends BaseClientSideWebPart<IApplicat
               groupFields: [
                 PropertyPaneTextField('title', {
                   label: strings.TitleFieldLabel
+                }),
+                PropertyPaneTextField('setLink', {
+                  label: 'Set my applications link'
                 })
               ]
             }

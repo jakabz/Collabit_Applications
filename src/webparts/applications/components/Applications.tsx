@@ -14,7 +14,7 @@ export default class Applications extends React.Component<IApplicationsProps, {}
     let self = this;
 
     function openList(){
-      window.open( self.props.absoluteUrl + "/Lists/MyApplications/MyApps.aspx");
+      window.open( self.props.setLink );
     }
 
     this.items = this.props.cantralAppsResult.map((item, key) => {
@@ -24,7 +24,7 @@ export default class Applications extends React.Component<IApplicationsProps, {}
       }
     });
 
-    if(this.props.myAppsResult){
+    if(this.props.myAppsResult.length > 0){
       this.myitems = this.props.cantralAppsResult.map((item, key) => {
         if(item.Id == this.props.myAppsResult[0].Application1Id || item.Id == this.props.myAppsResult[0].Application2Id){
           if(this.defaultIds.indexOf(item.Id) == -1){
